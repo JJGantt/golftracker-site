@@ -16,36 +16,37 @@ a { color: #0071e3; }
 <h1>GolfTracker Privacy Policy</h1>
 <p class="meta">Last updated: 2026-04-23</p>
 
-<p>GolfTracker ("the app") is a golf tracking application for iPhone and Apple Watch. This policy describes what data the app collects, where it goes, and how you can request deletion.</p>
+<p>GolfTracker ("the app") is a golf tracking application for iPhone and Apple Watch. This policy describes what data the app collects, how it is used, and how you can delete it.</p>
+
+<p>Your account data (rounds, courses, scores) is linked to your Apple Sign In identifier. Raw motion signals used to develop swing detection are stored separately under an anonymous per-install device identifier with no link to your account.</p>
 
 <h2>What we collect</h2>
 <ul>
+  <li><strong>Apple Sign In identifier</strong> — when you sign in with Apple, we receive an opaque user ID that Apple generates specifically for GolfTracker. We do not receive your name, email, or Apple ID — only the identifier. It is used to associate your rounds with your account across devices and reinstalls.</li>
   <li><strong>Precise location</strong> — your GPS coordinates during a round, including the location of each recorded shot. Used to calculate distances to holes and to build your shot history.</li>
   <li><strong>Coarse location</strong> — derived city/course information.</li>
   <li><strong>Motion data</strong> — accelerometer, rotation rate, and gyroscope readings from your Apple Watch around the moment of each detected swing. Used for ongoing development of swing detection.</li>
   <li><strong>HealthKit permission</strong> — required to enable 800 Hz raw-accelerometer data on Apple Watch. This is the high-resolution motion stream used by swing detection. Granting HealthKit is what makes swing detection work.</li>
   <li><strong>Round content</strong> — your courses, holes, strokes, scores, targets, and club selections.</li>
-  <li><strong>Anonymous device identifier</strong> — a UUID generated on first launch and stored locally. This is how we associate your data on the backend without ever asking for your name, email, or any login.</li>
+  <li><strong>Anonymous device identifier</strong> — a UUID generated on first launch and stored locally. Used only to key motion research data; never linked to your account.</li>
 </ul>
 
-<p>We do <strong>not</strong> collect your name, email address, phone number, contacts, photos, or any social identifiers. There is no user account system.</p>
-
 <h2>How we use it</h2>
-<p>Data is uploaded to our backend, keyed to the anonymous device UUID, and used to store your round history across devices and to continue developing swing detection.</p>
+<p><strong>Your account data</strong> — rounds, courses, strokes, scores, targets, and clubs — is uploaded to our backend keyed to your Apple Sign In identifier. This is what lets your history follow you across devices and reinstalls.</p>
+
+<p><strong>Research data</strong> — raw motion signals from your Apple Watch and the approximate location at which they were recorded — is uploaded separately, keyed to the anonymous device identifier with no link to your account. This data is used to continue developing swing detection.</p>
 
 <p>We do <strong>not</strong> sell your data, share it with advertisers, or use it for tracking across other apps or websites.</p>
 
 <h2>How long we keep it</h2>
-<p>Personal data (rounds, courses, scores, and the device UUID that links them to you) is retained until you delete it. Anonymized motion and location signals are retained indefinitely as research data.</p>
+<p>Account data is retained until you delete it. Anonymized research data is retained indefinitely.</p>
 
 <h2>Deleting your data</h2>
-<p>Open <strong>Settings → Delete my data</strong> in the app. This will:</p>
-<ul>
-  <li>Delete every record tied to your device — rounds, courses, strokes, scores, targets.</li>
-  <li>Sever the link between your device and any motion signals collected from it. The raw signal data is re-keyed to a fresh random identifier and retained in de-identified form for continued development of swing detection. It is no longer associated with you or your device.</li>
-</ul>
+<p>Open <strong>Settings → Delete my data</strong> in the app. This will remove every record tied to your Apple Sign In identifier — rounds, courses, strokes, scores, targets, clubs.</p>
 
-<p>Deleting the app also removes locally stored data and prevents further uploads.</p>
+<p>Anonymized research data (raw motion signals) is not deleted. It is stored under the per-install device identifier and has no link to your account.</p>
+
+<p>Deleting the app removes locally stored data and prevents further uploads. Signing out removes your session from the device without deleting server data.</p>
 
 <h2>Permissions</h2>
 <p>Location, motion, and HealthKit permissions are requested via the standard iOS/watchOS prompts. You can revoke them at any time in Settings. Revoking a permission does not delete previously uploaded data — use <strong>Settings → Delete my data</strong> in the app for that.</p>
